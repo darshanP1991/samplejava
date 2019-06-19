@@ -5,6 +5,6 @@ Hello Java
 </title>
 </head>
 <body>
-<center> <h1> Hello Java from git cli</h1> </center>
+<center> <h1> Hello Java from CICD pipeline</h1> </center>
 </body>
 </html>
