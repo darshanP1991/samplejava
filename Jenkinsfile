@@ -5,10 +5,17 @@ pipeline {
             args '-v /root/.m2:/root/.m2' 
         }
     }
+    
     stages {
+        
+        stage ('Clone') {
+            steps {
+                git branch: 'master', url: "https://github.com/jfrog/project-examples.git"
+            }
+        
         stage('Build') { 
             steps {
-                sh 'mvn -B -DskipTests clean package' 
+                sh 'mvn clean package' 
             }
         }
 }        
