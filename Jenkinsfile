@@ -12,10 +12,11 @@ pipeline {
             steps {
                 git branch: 'master', url: "https://github.com/darshanP1991/samplejava"
             }
-        
+        }
         stage('Build') { 
             steps {
                 sh 'mvn clean package' 
             }
         }
-}        
+	}
+}
